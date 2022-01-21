@@ -7,6 +7,11 @@
 a {
   text-decoration: none;
 }
+
+li {
+  list-style: none;
+}
+
 :root {
   --pad-margin: 15px;
   --pad-padrao: 5px;
@@ -91,3 +96,31 @@ body {
   padding: var(--pad-padrao) 10px;
   float: right;
 }
+
+.menu {
+  margin-top: var(--pad-margin);
+
+}
+
+.nav {
+  float: left;
+}
+
+.nav a {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: var(--pad-padrao);
+  color: #6e672c;
+  line-height: calc(var(--pad-margin)* 2);
+}
+
+.nav a:hover {
+  background: #fdf6be;
+}
+
+.depoimento {
+  width: 226px;
+  height: 164px;
+  float: right;
+}
+
