@@ -4,15 +4,28 @@
   font-family: Helvetica, 'Trebuchet MS', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+:root {
+  --pad-margin: 15px;
+  --pad-padrao: 5px;
+  --border-menu: #b5ab56;
+}
+
 body {
   background: #fff url(./img/bg.png);
-  margin: 15px;
+  margin: var(--pad-margin);
 }
 
 #conteiner {
   background: #ede9cc;
+  margin: 0 auto;
+  min-width: 740px;
+  max-width: 1180px;
 }
 
+/*STYLE HEADER*/
 #topo {
   position: relative;
   background: #dbcd87;
@@ -27,6 +40,18 @@ body {
   height: 250px;
   top: 0;
   left: 0;
+  z-index: 1;
+}
+
+.logo a {
+  position: absolute;
+  top: var(--pad-margin);
+  left: var(--pad-margin);
+  z-index: 3;
+  background: url(./img/logo.png) no-repeat;
+  width: 151px;
+  height: 66px;
+  text-indent: -9000px;
 }
 
 #area-menu {
@@ -36,4 +61,33 @@ body {
   background: url(./img/topo-imagem-lateral.png) no-repeat;
   width: 450px;
   height: 250px;
+  z-index: 2;
+}
+
+#caixa-menu {
+  margin-left: 90px;
+  margin-right: var(--pad-margin);
+  padding-top: var(--pad-margin);
+}
+
+#lista-cidade {
+  border-bottom: 1px solid var(--border-menu);
+  border-top: 1px solid var(--border-menu);
+  padding-top: var(--pad-padrao);
+  padding-bottom: var(--pad-padrao);
+  font-size: 0.7em;
+  color: #8b8448;
+}
+
+#lista-cidade .locais {
+  float: left;
+  line-height: 2.1em;
+}
+
+#lista-cidade .reservar {
+  text-transform: uppercase;
+  background: #a29750;
+  color: #fff5b0;
+  padding: var(--pad-padrao) 10px;
+  float: right;
 }
