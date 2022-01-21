@@ -16,6 +16,9 @@ li {
   --pad-margin: 15px;
   --pad-padrao: 5px;
   --border-menu: #b5ab56;
+  --color-text: #7d7640;
+  --pad-lat: 8px;
+  --font-link: 0.8em;
 }
 
 body {
@@ -23,8 +26,8 @@ body {
   margin: var(--pad-margin);
 }
 
-#conteiner {
-  background: #ede9cc;
+#container {
+  background: #ede9cc url(./img/bg-container.png) top center repeat-y;
   margin: 0 auto;
   min-width: 740px;
   max-width: 1180px;
@@ -99,7 +102,6 @@ body {
 
 .menu {
   margin-top: var(--pad-margin);
-
 }
 
 .nav {
@@ -108,10 +110,10 @@ body {
 
 .nav a {
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: var(--font-link);
   padding: var(--pad-padrao);
   color: #6e672c;
-  line-height: calc(var(--pad-margin)* 2);
+  line-height: calc(var(--pad-margin) * 2);
 }
 
 .nav a:hover {
@@ -124,3 +126,78 @@ body {
   float: right;
 }
 
+/*MAIN*/
+#area-principal {
+  float: left;
+  width: 50%;
+  background: url(./img/bg-area-principal.png) top left repeat-x;
+  padding: var(--pad-margin) 0px;
+}
+
+#area-lateral {
+  float: right;
+  width: 50%;
+  background: url(./img/bg-area-lateral.png) top left repeat-x;
+  padding: 20px 0px;
+}
+
+/*Formatação Área lateral*/
+#lista-bene li{
+  padding: var(--pad-lat);
+  border-bottom: 1px solid #f3efcb;
+  height: 6em;
+}
+
+#lista-bene li:hover {
+  background: #f6f3d6;
+}
+
+#lista-bene img {
+  width: 150px;
+  float: left;
+  margin-right: var(--pad-lat);
+}
+
+#lista-bene a p{
+  color: #000;
+  font-size: var(--font-link);
+}
+
+#lista-bene h3 {
+  font-size: 1.1em;
+  color: #615b2d;
+  padding: var(--pad-padrao);
+  background: url(/img/ornamento.png) no-repeat center right;
+}
+.conteudo-site {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*Rodapé*/
+footer {
+  clear: both;
+  padding: calc(var(--pad-margin) + 1px);
+  background: #fff url(./img/bg-rodape.png) repeat-x top;
+  color: var(--color-text);
+}
+
+footer a {
+  color: var(--color-text);
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #6e672c;
+}
+/*TEXTOS*/
+h2 {
+  color: var(--color-text);
+  font-size: 1.1em;
+  padding: 5px 0px;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
